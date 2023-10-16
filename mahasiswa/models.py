@@ -4,7 +4,7 @@ from django.db import models
 
     
 class mahasiswa(models.Model): 
-    nim = models.CharField(max_length=10)
+    nim = models.CharField(max_length=10,primary_key=True,unique=True)
     nama = models.CharField(max_length=100)
     kelas = models.CharField(max_length=1)
     created_at = models.DateField(auto_now=True)  
